@@ -12,15 +12,18 @@
             <!--------navigation---------- -->
             <nav>
                 <img src="images/" alt="logo">
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#">Resume</a></li>
                     <li><a href="#">Contacts</a></li>
                     <li><a href="#footer">Contact</a></li>
-
+                    <!-- exit icon -->
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <!-- menu icon -->
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
 
             <div class="header-text">
@@ -147,6 +150,9 @@
                 </div>        
             </div>
         </div>
+        <div class="copyright">
+            <p>Copyright<i class="fa-regular fa-copyright"></i>Landiwe Shabalala</p>
+        </div>
     </div>
 
 
@@ -170,6 +176,10 @@
         document.getElementById(tabname).classList.add("active-tab")
     }
     
+</script>
+<script>
+    //  script makes menu clickable
+    var sidemenu = document.getElementById("sidemenu")
 </script>
 </body>
 </html>
