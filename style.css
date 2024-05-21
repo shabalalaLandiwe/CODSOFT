@@ -4,6 +4,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     background-color: black;
@@ -315,13 +318,19 @@ nav .fas{
 
     nav ul{
         background: #ff004f;
-        position: fixed;
+        /*ensures menu stays fixed when page is scrolled 
+        positioned relative to the viewport.
+        */
+        position: fixed;  
         top: 0;
         right: -200px;
         width: 200px;
         height: 100vh;
         padding-top: 50px;
-        z-index: index 2;
+        /*Specifies the stack order of an element
+        Elements with a higher z-index value are displayed in front */
+        z-index: 2; 
+        transition: left 0.5s;
     }
     nav ul li{
         margin: 25px;
@@ -329,6 +338,7 @@ nav .fas{
     }
     nav ul .fas{
         cursor: pointer;
+        /*ensures icon is positioned within the top right corner of the nav ul menu. */
         position: absolute;
         left: 25px;
         right: 25px;
